@@ -38,7 +38,7 @@ Note: Install with PyQt6 backend using conda: <br/>
 `pip install imageio-ffmpeg` <br/>
 
 ### Install brainreg <br/>
-`pip install brainreg[napari]` <br/>
+`pip install 'brainreg[napari]'` <br/>
 `conda install -c conda-forge niftyreg` (MacOS only) <br/>
 
 ### Install cellfinder <br/>
