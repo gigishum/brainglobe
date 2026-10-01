@@ -15,7 +15,7 @@ cells_path = '/Users/brainrender/points.npy' # path to your brainmapper results
 cells = Points(cells_path, radius=45, colors="palegoldenrod", alpha=0.8)
 scene.add(cells)
 
-gene = "Esr1" # Esr1 gene expression
+gene = "Gpr161" # change to your gene
 
 geapi = GeneExpressionAPI()
 expids = geapi.get_gene_experiments(gene)
