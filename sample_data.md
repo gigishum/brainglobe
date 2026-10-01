@@ -3,4 +3,4 @@
 Download the entire folder
 
 Go to:
-NEMO > home > shared > coding_brainglobe_workshop > sample_data
+NEMO > home > shared > presentations > coding_brainglobe_workshop > sample_data
