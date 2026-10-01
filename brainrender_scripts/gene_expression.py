@@ -4,15 +4,19 @@ from myterial import orange
 from rich import print
 
 from brainrender import Scene, settings
+from brainrender.actors import Points
 from brainrender.atlas_specific import GeneExpressionAPI
 
-print(f"[{orange}]Running example: {Path(__file__).name}")
-
 settings.SHOW_AXES = False
-
 scene = Scene(inset=False)
 
-gene = "Gpr161"
+settings.SHADER_STYLE = "plastic"
+cells_path = '/Users/brainrender/points.npy' # path to your brainmapper results
+cells = Points(cells_path, radius=45, colors="palegoldenrod", alpha=0.8)
+scene.add(cells)
+
+gene = "Esr1" # Esr1 gene expression
+
 geapi = GeneExpressionAPI()
 expids = geapi.get_gene_experiments(gene)
 data = geapi.get_gene_data(gene, expids[1])
@@ -20,9 +24,7 @@ data = geapi.get_gene_data(gene, expids[1])
 gene_actor = geapi.griddata_to_volume(data, min_quantile=99, cmap="inferno")
 act = scene.add(gene_actor)
 
-ca1 = scene.add_brain_region("CA1", alpha=0.2, color="skyblue")
-ca3 = scene.add_brain_region("CA3", alpha=0.5, color="salmon")
-
+mpo = scene.add_brain_region("MPO", alpha=0.2, color="purple")
 
 scene.add_silhouette(act)
 
