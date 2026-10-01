@@ -3,7 +3,9 @@ from brainrender.actors import Points
 from brainrender import settings
 
 settings.SHADER_STYLE = "plastic"
-cells_path = '/Users/brainrender/points.npy' # path to your brainmapper results
+
+# Path to your brainmapper results
+cells_path = '/Users/brainrender/points.npy' 
 
 # Initialise brainrender scene
 scene = Scene()
