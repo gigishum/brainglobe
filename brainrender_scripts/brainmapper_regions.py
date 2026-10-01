@@ -23,11 +23,14 @@ import numpy as np
 settings.SHADER_STYLE = "plastic"
 settings.SHOW_AXES = False
 
-cells_path = Path(__file__).parent.parent / "resources" / "points.npy"
 
-# Define regions of interest (easier to define all at the
-# terminal/finest level of the hierarchy)
-regions = ["VISp1", "VISp4", "VISp5"]
+# Path to your brainmapper results
+cells_path = '/Users/brainrender/points.npy' 
+
+
+# Define regions of interest
+regions = ["MPO", "VMH", "MEA"]
+
 
 print(f"[{orange}]Running example: {Path(__file__).name}")
 
